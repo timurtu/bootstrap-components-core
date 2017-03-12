@@ -18,8 +18,10 @@
     "start": "cd ../demo-app && yarn start",
     "prod": "cd ../demo-app && yarn prod",
     "clean": "gulp clean",
-    "reboot": "npm run pub && cd ../demo-app && npm install --save bootstrap-components && cd ../core",
-    "pub": "gulp clean && gulp build && npm version patch && npm publish && gulp clean"
+
+    "pub": "gulp clean && gulp build && npm version patch && npm publish && gulp clean",
+    "commit": "git add . && git commit -m 'bugfix' && git push",
+    "reboot": "npm run pub && cd ../demo-app && npm install --save bootstrap-components && cd ../core"
   },
   "keywords": [],
   "author": "",
