@@ -14,7 +14,7 @@
     "utils.js"
   ],
   "scripts": {
-    "publish": "cp ../demo-app/README.md ./core/README.md",
+    "publish": "cp ../demo-app/README.md ../core/README.md",
     "start": "cd ../demo-app && yarn start",
     "prod": "cd ../demo-app && yarn prod",
     "clean": "gulp clean",
