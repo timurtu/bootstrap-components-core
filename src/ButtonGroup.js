@@ -7,7 +7,7 @@ import Button from './Button'
 
 const ButtonGroup = ({ children }) => (
 
-  <div className="btn-group">
+  <div className="btn-group" role="group">
     {[].concat(children).map((button, i) =>
 
       <Button key={i}>
