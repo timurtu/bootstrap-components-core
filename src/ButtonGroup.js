@@ -8,14 +8,16 @@ import Button from './Button'
 const ButtonGroup = ({ children, size }) => (
 
   <div className="btn-group" role="group">
-    {[].concat(children).map((button, i) =>
+    {[].concat(children).map((child, i) =>
 
-      <Button
-        key={i}
-        size={size}
-      >
-        {button.props.children}
-      </Button>
+      child.type === 'button' ?
+        <Button
+          key={i}
+          size={size}
+        >
+          {child.props.children}
+        </Button> :
+        { child }
     )}
   </div>
 )
