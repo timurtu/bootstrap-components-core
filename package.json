@@ -3,22 +3,12 @@
   "version": "1.1.142",
   "description": "React Bootstrap Components",
   "main": "index.js",
-  "files": [
-    "index.js",
-    "Icon.js",
-    "Container.js",
-    "Button.js",
-    "Alert.js",
-    "Dropdown.js",
-    "Grid.js",
-    "ButtonGroup.js",
-    "utils.js"
-  ],
   "scripts": {
     "publish": "cp ../demo-app/README.md ../core/README.md",
     "start": "cd ../demo-app && yarn start",
     "prod": "cd ../demo-app && yarn prod",
     "clean": "gulp clean",
+    "build": "gulp build",
     "pub": "gulp clean && gulp build && npm run commit && npm version patch && npm publish && gulp clean",
     "commit": "git add . && git commit -m 'bugfix' && git push",
     "reboot": "npm run pub && cd ../demo-app && npm install --save bootstrap-components && cd ../core"
@@ -41,5 +31,16 @@
     "gulp-rimraf": "^0.2.1",
     "npm-run-all": "^4.0.2",
     "react-server": "^0.6.0"
-  }
+  },
+  "files": [
+    "Alert.js",
+    "Button.js",
+    "ButtonGroup.js",
+    "Container.js",
+    "Dropdown.js",
+    "Grid.js",
+    "Icon.js",
+    "index.js",
+    "utils.js"
+  ]
 }
