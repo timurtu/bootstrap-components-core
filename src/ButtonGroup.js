@@ -10,14 +10,14 @@ const ButtonGroup = ({ children, size }) => (
   <div className="btn-group" role="group">
     {[].concat(children).map((child, i) =>
 
-      child.type === 'button' ?
+      child.type === 'Dropdown' ?
+        child :
         <Button
           key={i}
           size={size}
         >
           {child.props.children}
-        </Button> :
-        child
+        </Button>
     )}
   </div>
 )

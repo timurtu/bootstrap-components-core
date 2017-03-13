@@ -12,13 +12,13 @@ const Button = props => {
     children,
     className
   } = props
-  const btnSize = size ? `btn-${size}` : ' '
+  const btnSize = size ? `btn-${size}` : ''
   const btnType = type ? `btn-${type}` : 'btn-default'
 
   return (
     <button
       {...props}
-      className={`btn ${btnSize} ${btnType} ${className}`}
+      className={`btn ${btnSize} ${btnType} ${className ? className : ''}`.trim()}
     >
       {children}
     </button>
