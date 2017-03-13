@@ -18,7 +18,7 @@ const Button = props => {
   return (
     <button
       {...props}
-      className={`btn ${btnSize} ${btnType} ${className ? className : ''}`.trim()}
+      className={`btn ${btnSize} ${btnType} ${className ? className : ''}`}
     >
       {children}
     </button>
