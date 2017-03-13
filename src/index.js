@@ -8,6 +8,7 @@ import Container from './Container'
 import Alert from './Alert'
 import Dropdown from './Dropdown'
 import Grid from './Grid'
+import ButtonGroup from './ButtonGroup'
 
 export {
   Icon,
@@ -15,5 +16,6 @@ export {
   Container,
   Alert,
   Dropdown,
-  Grid
+  Grid,
+  ButtonGroup
 }
