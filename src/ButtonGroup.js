@@ -8,15 +8,13 @@ import Button from './Button'
 const ButtonGroup = ({ children }) => (
 
   <div className="btn-group">
+    {[].concat(children).map((button, i) =>
 
-    {children}
-    {/*{children.props.children.map((button, i) =>*/}
+      <Button key={i}>
 
-      {/*<Button key={i}>*/}
-
-        {/*{button.props.children}*/}
-      {/*</Button>*/}
-    {/*)}*/}
+        {button.props.children}
+      </Button>
+    )}
   </div>
 )
 
