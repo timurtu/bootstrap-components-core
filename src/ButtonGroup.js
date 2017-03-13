@@ -3,10 +3,13 @@
  */
 
 import React from 'react'
+import Button from './Button'
 
 const ButtonGroup = ({ children }) => (
   <div className="btn-group">
-    {children}
+    {children.map(button =>
+      <Button>{button.children}</Button>
+    )}
   </div>
 )
 
