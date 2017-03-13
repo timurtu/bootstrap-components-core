@@ -2,13 +2,13 @@
  * Created by timur on 2/11/17.
  */
 
-import Icon from './Icon'
-import Button from './Button'
-import Container from './Container'
-import Alert from './Alert'
-import Dropdown from './Dropdown'
-import Grid from './Grid'
-import ButtonGroup from './ButtonGroup'
+import Icon from './components/Icon'
+import Button from './components/Button'
+import Container from './components/Container'
+import Alert from './components/Alert'
+import Dropdown from './components/Dropdown'
+import Grid from './components/Grid'
+import ButtonGroup from './components/ButtonGroup'
 
 export {
   Icon,

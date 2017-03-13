@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "publish": "cp ../demo-app/README.md ../core/README.md",
-    "start": "cd ../demo-app && yarn start",
-    "prod": "cd ../demo-app && yarn prod",
     "clean": "gulp clean",
-    "build": "gulp build",
+    "build": "gulp build && mv components/* ./ && rm -rf components",
     "pub": "gulp clean && gulp build && npm run commit && npm version patch && npm publish && gulp clean",
     "commit": "git add . && git commit -m 'bugfix' && git push",
     "reboot": "npm run pub && cd ../demo-app && npm install --save bootstrap-components && cd ../core"
@@ -40,8 +38,6 @@
     "Container.js",
     "Dropdown.js",
     "Grid.js",
-    "Icon.js",
-    "index.js",
-    "utils.js"
+    "Icon.js"
   ]
 }

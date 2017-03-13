@@ -12,15 +12,19 @@ gulp.task('clean', () => gulp.src(['*.js', '!gulpfile.js'])
 
 gulp.task('build', ['clean'], () => {
 
+  const components = fs.readdirSync('src/components')
+
   const packageJson = Object.assign({},
     require('./package.json'),
-    { files: fs.readdirSync('src') }
+    { files: components }
   )
 
   fs.writeFileSync(
     'package.json',
     JSON.stringify(packageJson, null, 2)
   )
+
+
 
   return gulp.src('src/**')
     .pipe(babel())
