@@ -6,7 +6,7 @@
   "scripts": {
     "publish": "cp ../demo-app/README.md ../core/README.md",
     "clean": "gulp clean",
-    "build": "gulp build && mv components/* ./ && rm -rf components",
+    "build": "gulp build",
     "pub": "gulp clean && gulp build && npm run commit && npm version patch && npm publish && gulp clean",
     "commit": "git add . && git commit -m 'bugfix' && git push",
     "reboot": "npm run pub && cd ../demo-app && npm install --save bootstrap-components && cd ../core"
@@ -38,6 +38,8 @@
     "Container.js",
     "Dropdown.js",
     "Grid.js",
-    "Icon.js"
+    "Icon.js",
+    "index.js",
+    "utils.js"
   ]
 }

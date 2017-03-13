@@ -6,6 +6,8 @@ import Container from './Container.js';
 import Dropdown from './Dropdown.js';
 import Grid from './Grid.js';
 import Icon from './Icon.js';
+import index from './index.js';
+import utils from './utils.js';
 
 export default {
   Alert,
@@ -15,5 +17,7 @@ export default {
   Container,
   Dropdown,
   Grid,
-  Icon
+  Icon,
+  index,
+  utils
 };

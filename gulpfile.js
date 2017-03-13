@@ -14,7 +14,7 @@ const trimJSExt = fileName => fileName.slice(0, fileName.length - 3)
 
 gulp.task('build', ['clean'], () => {
 
-  const components = fs.readdirSync('src/components')
+  const components = fs.readdirSync('src')
 
   const packageJson = Object.assign({},
     require('./package.json'),
