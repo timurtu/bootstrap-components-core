@@ -5,17 +5,18 @@
 import React from 'react'
 import Button from './Button'
 
-const ButtonGroup = ({ children, toolbar }) => (
+const ButtonGroup = ({ children }) => (
 
   <div className="btn-group">
 
-    {children.map((button, i) =>
+    {children}
+    {/*{children.props.children.map((button, i) =>*/}
 
-      <Button key={i}>
+      {/*<Button key={i}>*/}
 
-        {button.props.children}
-      </Button>
-    )}
+        {/*{button.props.children}*/}
+      {/*</Button>*/}
+    {/*)}*/}
   </div>
 )
 
