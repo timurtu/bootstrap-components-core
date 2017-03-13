@@ -12,7 +12,7 @@ const Button = props => {
     children,
     className
   } = props
-  const btnSize = size ? `btn-${size}` : ' '
+  const btnSize = size ? `btn-${size}` : ''
   const btnType = type ? `btn-${type}` : 'btn-default'
 
   return (
