@@ -12,9 +12,8 @@ const ButtonGroup = ({ children, size }) => (
 
       <Button
         key={i}
-        size
+        size={size}
       >
-
         {button.props.children}
       </Button>
     )}
