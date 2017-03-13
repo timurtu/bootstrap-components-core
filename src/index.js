@@ -1,21 +1,19 @@
-/**
- * Created by timur on 2/11/17.
- */
+import Alert from './Alert.js';
+import Button from './Button.js';
+import ButtonGroup from './ButtonGroup.js';
+import ButtonToolbar from './ButtonToolbar.js';
+import Container from './Container.js';
+import Dropdown from './Dropdown.js';
+import Grid from './Grid.js';
+import Icon from './Icon.js';
 
-import Icon from './components/Icon'
-import Button from './components/Button'
-import Container from './components/Container'
-import Alert from './components/Alert'
-import Dropdown from './components/Dropdown'
-import Grid from './components/Grid'
-import ButtonGroup from './components/ButtonGroup'
-
-export {
-  Icon,
-  Button,
-  Container,
+export default {
   Alert,
+  Button,
+  ButtonGroup,
+  ButtonToolbar,
+  Container,
   Dropdown,
   Grid,
-  ButtonGroup
-}
+  Icon
+};

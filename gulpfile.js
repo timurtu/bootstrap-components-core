@@ -10,6 +10,8 @@ const fs = require('fs')
 gulp.task('clean', () => gulp.src(['*.js', '!gulpfile.js'])
   .pipe(rimraf()))
 
+const trimJSExt = fileName => fileName.slice(0, fileName.length - 3)
+
 gulp.task('build', ['clean'], () => {
 
   const components = fs.readdirSync('src/components')
@@ -24,6 +26,19 @@ gulp.task('build', ['clean'], () => {
     JSON.stringify(packageJson, null, 2)
   )
 
+  const importComponents = components.map(component => {
+    return `import ${trimJSExt(component)} from './${component}'`
+  })
+    .reduce((accum, comp) => accum + comp + ';\n', '')
+
+  const exportComponents = `export default {${
+    components.map(component => '\n  ' +trimJSExt(component))
+  }\n}`
+
+  fs.writeFileSync(
+    'src/index.js',
+    `${importComponents}\n${exportComponents};`
+  )
 
 
   return gulp.src('src/**')

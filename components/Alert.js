@@ -1,13 +1,19 @@
-/**
- * Created by timur on 2/12/17.
- */
+'use strict';
 
-import React from 'react';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Alert = function Alert(_ref) {
   var type = _ref.type,
       children = _ref.children;
-  return React.createElement(
+  return _react2.default.createElement(
     'div',
     {
       className: 'alert alert-' + (type ? type : 'default'),
@@ -15,6 +21,8 @@ var Alert = function Alert(_ref) {
     },
     children
   );
-};
+}; /**
+    * Created by timur on 2/12/17.
+    */
 
-export default Alert;
+exports.default = Alert;

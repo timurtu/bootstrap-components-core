@@ -1,25 +1,34 @@
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+'use strict';
 
-/**
- * Created by timur on 3/10/17.
- */
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-import React from 'react';
-import { itemToArray } from './utils';
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; /**
+                                                                                                                                                                                                                                                                   * Created by timur on 3/10/17.
+                                                                                                                                                                                                                                                                   */
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utils = require('./utils');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Grid = function Grid(props) {
   var children = props.children;
 
   // Rows are the immediate children of the grid
 
-  var rows = itemToArray(children);
+  var rows = (0, _utils.itemToArray)(children);
 
   var grid = rows.map(function (row, y) {
 
     // Columns are grandchildren of the grid
-    var cols = itemToArray(row.props.children);
+    var cols = (0, _utils.itemToArray)(row.props.children);
 
-    return React.createElement(
+    return _react2.default.createElement(
       'div',
       _extends({}, row.props, {
         key: y,
@@ -36,7 +45,7 @@ var Grid = function Grid(props) {
             return 'visible-' + prop + '-block';
           });
 
-          return React.createElement('div', {
+          return _react2.default.createElement('div', {
             key: x,
             className: 'clearfix ' + className
           });
@@ -87,7 +96,7 @@ var Grid = function Grid(props) {
           return Object.assign({}, passDownProps, newProp);
         }, {});
 
-        return React.createElement('div', _extends({
+        return _react2.default.createElement('div', _extends({
           key: x,
           className: (displayString + ' ' + offsetString).trim()
         }, colPassDownProps));
@@ -95,11 +104,11 @@ var Grid = function Grid(props) {
     );
   });
 
-  return React.createElement(
+  return _react2.default.createElement(
     'div',
     props,
     grid
   );
 };
 
-export default Grid;
+exports.default = Grid;
