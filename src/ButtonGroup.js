@@ -7,8 +7,10 @@ import Button from './Button'
 
 const ButtonGroup = ({ children }) => (
   <div className="btn-group">
-    {children.map(button =>
-      <Button>{button.props.children}</Button>
+    {children.map((button, i) =>
+      <Button key={i}>
+        {button.props.children}
+      </Button>
     )}
   </div>
 )
