@@ -5,13 +5,12 @@
 import React from 'react'
 import cuid from 'cuid'
 import { Link } from 'react-router'
-import { itemToArray } from './utils'
 
 const Dropdown = ({ dropup, children, title, right }) => {
 
   const id = cuid()
 
-  const items = itemToArray(children)
+  const items = [].concat(children)
 
   const dropdownItems = items.map((item, i) => {
 

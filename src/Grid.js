@@ -3,19 +3,18 @@
  */
 
 import React from 'react'
-import { itemToArray } from './utils'
 
 const Grid = props => {
 
   const { children } = props
 
   // Rows are the immediate children of the grid
-  const rows = itemToArray(children)
+  const rows = [].concat(children)
 
   const grid = rows.map((row, y) => {
 
     // Columns are grandchildren of the grid
-    const cols = itemToArray(row.props.children)
+    const cols = [].concat(row.props.children)
 
     return (
       <div
