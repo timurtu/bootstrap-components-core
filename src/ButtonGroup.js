@@ -5,9 +5,12 @@
 import React from 'react'
 import Button from './Button'
 
-const ButtonGroup = ({ children }) => (
+const ButtonGroup = ({ children, toolbar }) => (
+
   <div className="btn-group">
+
     {children.map((button, i) =>
+
       <Button key={i}>
         {button.props.children}
       </Button>
