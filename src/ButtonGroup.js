@@ -12,6 +12,7 @@ const ButtonGroup = ({ children, toolbar }) => (
     {children.map((button, i) =>
 
       <Button key={i}>
+
         {button.props.children}
       </Button>
     )}
