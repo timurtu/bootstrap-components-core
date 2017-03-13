@@ -7,7 +7,7 @@ import Dropdown from './Dropdown.js';
 import Grid from './Grid.js';
 import Icon from './Icon.js';
 
-export default {
+export {
   Alert,
   Button,
   ButtonGroup,

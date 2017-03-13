@@ -31,7 +31,7 @@ gulp.task('build', ['clean'], () => {
   })
     .reduce((accum, comp) => accum + comp + ';\n', '')
 
-  const exportComponents = `export default {${
+  const exportComponents = `export {${
     components.map(component => '\n  ' +trimJSExt(component))
   }\n}`
 
