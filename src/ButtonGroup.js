@@ -17,7 +17,7 @@ const ButtonGroup = ({ children, size }) => (
         >
           {child.props.children}
         </Button> :
-        { child }
+        child
     )}
   </div>
 )
