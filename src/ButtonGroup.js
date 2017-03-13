@@ -8,7 +8,7 @@ import Button from './Button'
 const ButtonGroup = ({ children }) => (
   <div className="btn-group">
     {children.map(button =>
-      <Button>{button.children}</Button>
+      <Button>{button.props.children}</Button>
     )}
   </div>
 )
