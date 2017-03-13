@@ -38,8 +38,6 @@
     "Container.js",
     "Dropdown.js",
     "Grid.js",
-    "Icon.js",
-    "index.js",
-    "utils.js"
+    "Icon.js"
   ]
 }
