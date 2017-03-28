@@ -39,7 +39,7 @@ class ButtonGroup extends React.Component {
 
       if (child.type === 'button') {
 
-        const button = (
+        return (
           <Button
             key={!justified ? i : null}
             size={size}
@@ -47,20 +47,6 @@ class ButtonGroup extends React.Component {
             {child.props.children}
           </Button>
         )
-
-        if (justified) {
-          return (
-            <div
-              key={i}
-              className="btn-group"
-              role="group"
-            >
-              {button}
-            </div>
-          )
-        }
-
-        return button
       }
 
       return child
@@ -71,7 +57,6 @@ class ButtonGroup extends React.Component {
     const buttonGroup = dropdown ? (
       <Dropdown
         group
-        justified
         title={title}
         className={className}
       >

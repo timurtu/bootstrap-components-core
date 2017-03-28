@@ -14,8 +14,7 @@ class Dropdown extends React.Component {
       title,
       right,
       group,
-      className,
-      justified
+      className
     } = this.props
     const items = [].concat(children)
     const dropdownItems = items.map((item, i) => {
@@ -99,8 +98,7 @@ class Dropdown extends React.Component {
     )
 
     if (group) {
-
-      const dropdownButtonGroup = (
+      return (
         <div
           className={className}
           role="group"
@@ -109,19 +107,6 @@ class Dropdown extends React.Component {
           {dropdownMenu}
         </div>
       )
-
-      if (justified) {
-        return (
-          <div
-            className={className}
-            role="group"
-          >
-            {dropdownButtonGroup}
-          </div>
-        )
-      }
-
-      return dropdownButtonGroup
     }
 
     return (
