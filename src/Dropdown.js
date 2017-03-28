@@ -92,9 +92,7 @@ class Dropdown extends React.Component {
     )
 
     const dropdownMenu = (
-      <ul
-        className={`dropdown-menu${right ? ' dropdown-menu-right' : ''}`}
-      >
+      <ul className={`dropdown-menu${right ? ' dropdown-menu-right' : ''}`}>
         {dropdownItems}
       </ul>
     )
