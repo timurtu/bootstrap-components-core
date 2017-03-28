@@ -81,7 +81,7 @@ class Dropdown extends React.Component {
       `btn btn-default dropdown-toggle${right ? ' pull-right' : ''}`
 
     const dropdownLink = (
-      <button
+      <a
         id={id}
         className={dropdownLinkClassName}
         type="button"
@@ -90,7 +90,7 @@ class Dropdown extends React.Component {
         aria-expanded="true"
       >
         {title} <span className="caret" />
-      </button>
+      </a>
     )
 
     const dropdownMenu = (
