@@ -6,53 +6,52 @@ import React from 'react'
 import Button from './Button'
 import Dropdown from './Dropdown'
 
-const ButtonGroup = ({ children, size, toolbar }) => toolbar ? (
-  <div
-    className="btn-toolbar"
-    role="toolbar"
-  >
-    {children}
-  </div>
-) : (
-  <div
-    className="btn-group"
-    role="group"
-  >
-    {[].concat(children).map((child, i) => {
+const ButtonGroup = ({ children, size, toolbar, dropdown, title }) =>  {
 
-      if (child === undefined) {
-        return null
-      }
+  if(toolbar) {
+    return (
+      <div
+        className="btn-toolbar"
+        role="toolbar"
+      >
+        {children}
+      </div>
+    )
+  }
 
-      if (child.type === 'button') {
+  const buttons = dropdown ? (
+    <Dropdown title={title}>
+      {children}
+    </Dropdown>
+  ) : [].concat(children).map((child, i) => {
 
-        if(child.props.dropdown) {
-          return (
-            <Dropdown
-              key={i}
-              title={child.props.title}
-              style={{
-                display: 'inline-block'
-              }}
-            >
-              {child.props.children}
-            </Dropdown>
-          )
-        }
+    if (child === undefined) {
+      return null
+    }
 
-        return (
-          <Button
-            key={i}
-            size={size}
-          >
-            {child.props.children}
-          </Button>
-        )
-      }
+    if (child.type === 'button') {
 
-      return child
-    })}
-  </div>
-)
+      return (
+        <Button
+          key={i}
+          size={size}
+        >
+          {child.props.children}
+        </Button>
+      )
+    }
+
+    return child
+  })
+
+  return (
+    <div
+      className="btn-group"
+      role="group"
+    >
+      {buttons}
+    </div>
+  )
+}
 
 export default ButtonGroup
