@@ -17,7 +17,11 @@ const ButtonGroup = ({ children, size }) => (
       if (child.props.toolbar) {
         return (
           <div className="btn-toolbar" role="toolbar">
-            {child.props.children}
+            {child.props.children.map((btnGroup, i) => (
+              <ButtonGroup key={i}>
+                {btnGroup.children}
+              </ButtonGroup>
+            ))}
           </div>
         )
       }
