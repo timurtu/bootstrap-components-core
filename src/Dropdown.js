@@ -75,7 +75,7 @@ class Dropdown extends React.Component {
       )
     })
 
-    return (
+    const dropdown = (
       <div className={dropup ? 'dropup' : 'dropdown'}>
         <a
           id={id}
@@ -96,6 +96,8 @@ class Dropdown extends React.Component {
         </ul>
       </div>
     )
+
+    return dropdown
   }
 }
 Dropdown.propTypes = {
