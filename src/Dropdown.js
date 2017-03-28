@@ -80,7 +80,6 @@ class Dropdown extends React.Component {
 
     const dropdownLink = (
       <a
-        href="#"
         className={dropdownLinkClassName}
         data-toggle="dropdown"
         role="button"

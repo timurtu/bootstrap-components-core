@@ -22,7 +22,6 @@ const Button = props => {
 
   return (
     <a
-      href="#"
       {...props}
       className={interpretedClassName}
       role="button"
