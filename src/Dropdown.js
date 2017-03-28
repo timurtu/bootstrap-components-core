@@ -13,7 +13,9 @@ class Dropdown extends React.Component {
       dropup,
       children,
       title,
-      right
+      right,
+      group,
+      className
     } = this.props
     const id = cuid()
     const items = [].concat(children)
@@ -97,14 +99,17 @@ class Dropdown extends React.Component {
       </ul>
     )
 
-    const dropdown = (
+    return group ? (
+      <div className={className}>
+        {dropdownLink}
+        {dropdownMenu}
+      </div>
+    ) : (
       <div className={dropup ? 'dropup' : 'dropdown'}>
         {dropdownLink}
         {dropdownMenu}
       </div>
     )
-
-    return dropdown
   }
 }
 Dropdown.propTypes = {

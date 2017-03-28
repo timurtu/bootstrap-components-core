@@ -30,11 +30,7 @@ class ButtonGroup extends React.Component {
       )
     }
 
-    const buttons = dropdown ? (
-      <Dropdown title={title}>
-        {children}
-      </Dropdown>
-    ) : [].concat(children).map((child, i) => {
+    const buttons = [].concat(children).map((child, i) => {
 
       if (child === undefined) {
         return null
@@ -55,14 +51,26 @@ class ButtonGroup extends React.Component {
       return child
     })
 
-    return (
+    const className = `btn-group${vertical ? '-vertical' : ''}`
+
+    const buttonGroup = dropdown ? (
+      <Dropdown
+        group
+        title={title}
+        className={className}
+      >
+        {children}
+      </Dropdown>
+    ) : (
       <div
-        className={`btn-group${vertical ? '-vertical' : ''}`}
+        className={className}
         role="group"
       >
         {buttons}
       </div>
     )
+
+    return buttonGroup
   }
 }
 
