@@ -41,7 +41,7 @@ class ButtonGroup extends React.Component {
 
         return (
           <Button
-            key={!justified ? i : null}
+            key={i}
             size={size}
           >
             {child.props.children}
