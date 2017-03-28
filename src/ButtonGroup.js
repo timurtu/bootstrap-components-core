@@ -52,6 +52,7 @@ class ButtonGroup extends React.Component {
           <div
             key={i}
             className="btn-group"
+            role="group"
           >
             {button}
           </div>
