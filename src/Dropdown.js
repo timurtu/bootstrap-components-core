@@ -82,11 +82,10 @@ class Dropdown extends React.Component {
       <a
         href="#"
         className={dropdownLinkClassName}
-        type="button"
         data-toggle="dropdown"
-        aria-haspopup="true"
-        aria-expanded="true"
         role="button"
+        aria-haspopup="true"
+        aria-expanded="false"
       >
         {title} <span className="caret" />
       </a>
