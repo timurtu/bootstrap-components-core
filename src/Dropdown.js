@@ -82,6 +82,7 @@ class Dropdown extends React.Component {
 
     const dropdownLink = (
       <a
+        href="#"
         id={id}
         className={dropdownLinkClassName}
         type="button"
