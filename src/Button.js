@@ -22,9 +22,10 @@ const Button = props => {
 
   return (
     <a
-      role="button"
+      href="#"
       {...props}
       className={interpretedClassName}
+      role="button"
     >
       {children}
     </a>

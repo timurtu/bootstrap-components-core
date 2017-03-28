@@ -54,15 +54,19 @@ class ButtonGroup extends React.Component {
 
     const className = `btn-group${vertical ? '-vertical' : ''}${justified ? ' btn-group-justified' : ''}`
 
-    const buttonGroup = dropdown ? (
-      <Dropdown
-        group
-        title={title}
-        className={className}
-      >
-        {children}
-      </Dropdown>
-    ) : (
+    if (dropdown) {
+      return (
+        <Dropdown
+          group
+          title={title}
+          className={className}
+        >
+          {children}
+        </Dropdown>
+      )
+    }
+
+    return (
       <div
         className={className}
         role="group"
@@ -70,8 +74,6 @@ class ButtonGroup extends React.Component {
         {buttons}
       </div>
     )
-
-    return buttonGroup
   }
 }
 
