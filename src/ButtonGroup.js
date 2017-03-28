@@ -48,23 +48,6 @@ class ButtonGroup extends React.Component {
           </Button>
         )
 
-        if(justified && dropdown) {
-          return (
-            <div
-              key={i}
-              className="btn-group"
-              role="group"
-            >
-              <div
-                className="btn-group"
-                role="group"
-              >
-                {button}
-              </div>
-            </div>
-          )
-        }
-
         if (justified) {
           return (
             <div
@@ -88,6 +71,7 @@ class ButtonGroup extends React.Component {
     const buttonGroup = dropdown ? (
       <Dropdown
         group
+        justified
         title={title}
         className={className}
       >
