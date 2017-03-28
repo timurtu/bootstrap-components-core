@@ -72,11 +72,15 @@ const Dropdown = ({ dropup, children, title, right }) => {
     return dropdownItem
   })
 
+  const className =
+    `btn btn-default dropdown-toggle ${right ? 'pull-right' : ''}`
+    .trim()
+
   return (
     <div className={dropup ? 'dropup' : 'dropdown'}>
       <a
         id={id}
-        className={`btn btn-default dropdown-toggle ${right ? 'pull-right' : ''}`}
+        className={className}
         type="button"
         data-toggle="dropdown"
         aria-haspopup="true"
