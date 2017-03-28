@@ -5,25 +5,19 @@
 import React from 'react'
 import Button from './Button'
 
-const ButtonGroup = ({ children, size, toolbar }) => (
-
+const ButtonGroup = ({ children, size, toolbar }) => toolbar ? (
+  <div
+    className="btn-toolbar"
+    role="toolbar"
+  >
+    {children}
+  </div>
+) : (
   <div className="btn-group" role="group">
     {[].concat(children).map((child, i) => {
 
       if (child === undefined) {
         return null
-      }
-
-      if (toolbar) {
-        return (
-          <div
-            key={i}
-            className="btn-toolbar"
-            role="toolbar"
-          >
-            {child.props.children}
-          </div>
-        )
       }
 
       if (child.type === 'button') {
