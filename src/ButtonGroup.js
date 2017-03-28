@@ -4,7 +4,6 @@
 
 import React from 'react'
 import Button from './Button'
-import Dropdown from './Dropdown'
 
 const ButtonGroup = ({ children, size, toolbar }) => toolbar ? (
   <div
@@ -25,17 +24,6 @@ const ButtonGroup = ({ children, size, toolbar }) => toolbar ? (
       }
 
       if (child.type === 'button') {
-
-        if(child.props.dropdown) {
-          return (
-            <Dropdown
-              key={i}
-              title={child.props.title}
-            >
-              {child.props.children}
-            </Dropdown>
-          )
-        }
 
         return (
           <Button
