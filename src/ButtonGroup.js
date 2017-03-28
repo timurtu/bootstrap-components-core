@@ -13,7 +13,7 @@ const ButtonGroup = ({ children, size }) => (
       if (child.props.toolbar) {
         return (
           <div className="btn-toolbar" role="toolbar">
-            {child.props.children}
+            {child.props ? child.props.children : null}
           </div>
         )
       }
