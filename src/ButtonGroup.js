@@ -10,14 +10,15 @@ const ButtonGroup = ({ children, size }) => (
   <div className="btn-group" role="group">
     {[].concat(children).map((child, i) => {
 
-      if (child.props.toolbar) {
+      if (child.props && child.props.toolbar) {
         return (
           <div className="btn-toolbar" role="toolbar">
-            {child.props ? child.props.children : null}
+            {child.props.children}
           </div>
         )
       }
-      else if (child.type === 'button') {
+
+      if (child.type === 'button') {
         return (
           <Button
             key={i}
@@ -27,9 +28,8 @@ const ButtonGroup = ({ children, size }) => (
           </Button>
         )
       }
-      else {
-        return child
-      }
+
+      return child
     })}
   </div>
 )
