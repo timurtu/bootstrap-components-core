@@ -16,7 +16,11 @@ const ButtonGroup = ({ children, size, toolbar }) => (
 
       if (toolbar) {
         return (
-          <div className="btn-toolbar" role="toolbar">
+          <div
+            key={i}
+            className="btn-toolbar"
+            role="toolbar"
+          >
             {child.props.children}
           </div>
         )
