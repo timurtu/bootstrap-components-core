@@ -3,7 +3,6 @@
  */
 
 import React from 'react'
-import cuid from 'cuid'
 import { Link } from 'react-router'
 
 class Dropdown extends React.Component {
@@ -17,7 +16,6 @@ class Dropdown extends React.Component {
       group,
       className
     } = this.props
-    const id = cuid()
     const items = [].concat(children)
     const dropdownItems = items.map((item, i) => {
 
@@ -83,7 +81,6 @@ class Dropdown extends React.Component {
     const dropdownLink = (
       <a
         href="#"
-        id={id}
         className={dropdownLinkClassName}
         type="button"
         data-toggle="dropdown"
@@ -98,7 +95,6 @@ class Dropdown extends React.Component {
     const dropdownMenu = (
       <ul
         className={`dropdown-menu${right ? ' dropdown-menu-right' : ''}`}
-        aria-labelledby={id}
       >
         {dropdownItems}
       </ul>
