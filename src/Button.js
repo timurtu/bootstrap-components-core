@@ -21,13 +21,12 @@ const Button = props => {
       .trim()
 
   return (
-    <a
+    <button
       {...props}
       className={interpretedClassName}
-      role="button"
     >
       {children}
-    </a>
+    </button>
   )
 }
 
