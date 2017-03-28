@@ -19,7 +19,7 @@ class Dropdown extends React.Component {
     const items = [].concat(children)
     const dropdownItems = items.map((item, i) => {
 
-      const { to, href } = item.props
+      const { to, href, disabled } = item.props
 
       switch (item.type) {
         case 'hr':
@@ -42,7 +42,7 @@ class Dropdown extends React.Component {
           )
       }
 
-      if (item.props.disabled) {
+      if (disabled) {
         return (
           <li
             key={i}
