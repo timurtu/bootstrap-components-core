@@ -75,25 +75,32 @@ class Dropdown extends React.Component {
       )
     })
 
+    const dropdownLink = (
+      <a
+        id={id}
+        className={`btn btn-default dropdown-toggle${right ? ' pull-right' : ''}`}
+        type="button"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="true"
+      >
+        {title} <span className="caret" />
+      </a>
+    )
+
+    const dropdownMenu = (
+      <ul
+        className={`dropdown-menu${right ? ' dropdown-menu-right' : ''}`}
+        aria-labelledby={id}
+      >
+        {dropdownItems}
+      </ul>
+    )
+
     const dropdown = (
       <div className={dropup ? 'dropup' : 'dropdown'}>
-        <a
-          id={id}
-          className={`btn btn-default dropdown-toggle${right ? ' pull-right' : ''}`}
-          type="button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="true"
-        >
-          {title} <span className="caret" />
-        </a>
-
-        <ul
-          className={`dropdown-menu${right ? ' dropdown-menu-right' : ''}`}
-          aria-labelledby={id}
-        >
-          {dropdownItems}
-        </ul>
+        {dropdownLink}
+        {dropdownMenu}
       </div>
     )
 
