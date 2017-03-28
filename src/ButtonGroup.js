@@ -15,7 +15,8 @@ class ButtonGroup extends React.Component {
       size,
       toolbar,
       dropdown,
-      title
+      title,
+      vertical
     } = this.props
 
     if (toolbar) {
@@ -56,7 +57,7 @@ class ButtonGroup extends React.Component {
 
     return (
       <div
-        className="btn-group"
+        className={`btn-group${vertical ? '-vertical' : ''}`}
         role="group"
       >
         {buttons}
