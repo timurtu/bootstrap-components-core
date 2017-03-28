@@ -5,7 +5,7 @@
 import React from 'react'
 import Button from './Button'
 
-const ButtonGroup = ({ children, size }) => (
+const ButtonGroup = ({ children, size, toolbar }) => (
 
   <div className="btn-group" role="group">
     {[].concat(children).map((child, i) => {
@@ -14,14 +14,10 @@ const ButtonGroup = ({ children, size }) => (
         return null
       }
 
-      if (child.props.toolbar) {
+      if (toolbar) {
         return (
           <div className="btn-toolbar" role="toolbar">
-            {child.props.children.map((btnGroup, i) => (
-              <ButtonGroup key={i}>
-                {btnGroup.children}
-              </ButtonGroup>
-            ))}
+            {child.props.children}
           </div>
         )
       }
