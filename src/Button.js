@@ -16,7 +16,7 @@ const Button = props => {
   const btnType = type ? `btn-${type}` : 'btn-default'
   const interpretedClassName =
     `btn ${btnSize || ''} ${btnType || ''} ${className || ''}`
-      .split(/\s/)
+      .split(/\s+/)
       .join(' ')
       .trim()
 
