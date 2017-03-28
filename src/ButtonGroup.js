@@ -41,7 +41,7 @@ class ButtonGroup extends React.Component {
 
         const button = (
           <Button
-            key={justified ? i : null}
+            key={!justified ? i : null}
             size={size}
           >
             {child.props.children}
