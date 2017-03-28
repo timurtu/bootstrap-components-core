@@ -16,9 +16,6 @@ const ButtonGroup = ({ children, size, toolbar }) => toolbar ? (
   <div
     className="btn-group"
     role="group"
-    style={{
-      display: 'block'
-    }}
   >
     {[].concat(children).map((child, i) => {
 
