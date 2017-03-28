@@ -19,6 +19,10 @@ class Dropdown extends React.Component {
     const items = [].concat(children)
     const dropdownItems = items.map((item, i) => {
 
+      if (item === undefined) {
+        return null
+      }
+
       const { to, href, disabled } = item.props
 
       switch (item.type) {
