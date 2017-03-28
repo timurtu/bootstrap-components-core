@@ -13,7 +13,13 @@ const ButtonGroup = ({ children, size, toolbar }) => toolbar ? (
     {children}
   </div>
 ) : (
-  <div className="btn-group" role="group">
+  <div
+    className="btn-group"
+    role="group"
+    style={{
+      display: 'block'
+    }}
+  >
     {[].concat(children).map((child, i) => {
 
       if (child === undefined) {
