@@ -14,11 +14,16 @@ const Button = props => {
   } = props
   const btnSize = size ? `btn-${size}` : ''
   const btnType = type ? `btn-${type}` : 'btn-default'
+  const interpretedClassName =
+    `btn ${btnSize || ''} ${btnType || ''} ${className || ''}`
+      .split(/\s/)
+      .join(' ')
+      .trim()
 
   return (
     <button
       {...props}
-      className={`btn ${btnSize || ''} ${btnType || ''} ${className || ''}`}
+      className={interpretedClassName}
     >
       {children}
     </button>
