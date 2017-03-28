@@ -21,29 +21,29 @@ class Dropdown extends React.Component {
 
       const { to, href } = item.props
 
-      let dropdownItem
+      switch (item.type) {
+        case 'hr':
+          return (
+            <li
+              key={i}
+              role="separator"
+              className="divider"
+            />
+          )
 
-      if (item.type === 'hr') {
-        dropdownItem = (
-          <li
-            key={i}
-            role="separator"
-            className="divider"
-          />
-        )
+        case 'header':
+          return (
+            <li
+              key={i}
+              className="dropdown-header"
+            >
+              {item}
+            </li>
+          )
       }
-      else if (item.type === 'header') {
-        dropdownItem = (
-          <li
-            key={i}
-            className="dropdown-header"
-          >
-            {item}
-          </li>
-        )
-      }
-      else if (item.props.disabled) {
-        dropdownItem = (
+
+      if (item.props.disabled) {
+        return (
           <li
             key={i}
             className="disabled"
@@ -54,8 +54,9 @@ class Dropdown extends React.Component {
           </li>
         )
       }
-      else if (to) {
-        dropdownItem = (
+
+      if (to) {
+        return (
           <li key={i}>
             <Link
               to={to}
@@ -64,17 +65,14 @@ class Dropdown extends React.Component {
           </li>
         )
       }
-      else {
-        dropdownItem = (
-          <li key={i}>
-            <a href={href ? href : '#'}>
-              {item}
-            </a>
-          </li>
-        )
-      }
 
-      return dropdownItem
+      return (
+        <li key={i}>
+          <a href={href ? href : '#'}>
+            {item}
+          </a>
+        </li>
+      )
     })
 
     return (
@@ -87,7 +85,7 @@ class Dropdown extends React.Component {
           aria-haspopup="true"
           aria-expanded="true"
         >
-          {title} <span className="caret"/>
+          {title} <span className="caret" />
         </a>
 
         <ul
