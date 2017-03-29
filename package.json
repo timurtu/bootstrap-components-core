@@ -33,6 +33,7 @@
   "files": [
     "Alert.js",
     "Button.js",
+    "ButtonDropdown.js",
     "ButtonGroup.js",
     "Container.js",
     "Dropdown.js",
