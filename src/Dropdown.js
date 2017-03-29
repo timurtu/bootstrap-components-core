@@ -103,7 +103,7 @@ class Dropdown extends React.Component {
           style={style}
         >
           <span className="caret" />
-          <span class="sr-only">Toggle Dropdown</span>
+          <span className="sr-only">Toggle Dropdown</span>
         </button>
       </div>
     ).props.children : (
