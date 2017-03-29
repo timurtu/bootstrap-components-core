@@ -88,7 +88,12 @@ class Dropdown extends React.Component {
 
     const dropdownLink = split ? (
       <div>
-        <button className={dropdownLinkClassName}>{title}</button>
+        <button
+          className={dropdownLinkClassName}
+          style={style}
+        >
+          {title}
+        </button>
 
         <button
           className={dropdownLinkClassName}
@@ -98,6 +103,7 @@ class Dropdown extends React.Component {
           style={style}
         >
           <span className="caret" />
+          <span class="sr-only">Toggle Dropdown</span>
         </button>
       </div>
     ).props.children : (
@@ -109,7 +115,9 @@ class Dropdown extends React.Component {
         aria-expanded="false"
         style={style}
       >
-        {title} <span className="caret" />
+        {title}
+        <span className="caret" />
+        <span class="sr-only">Toggle Dropdown</span>
       </a>
     )
 
