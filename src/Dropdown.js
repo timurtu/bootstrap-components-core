@@ -90,16 +90,15 @@ class Dropdown extends React.Component {
       <div>
         <button className={dropdownLinkClassName}>{title}</button>
 
-        <a
+        <button
           className={dropdownLinkClassName}
           data-toggle="dropdown"
-          role="button"
           aria-haspopup="true"
           aria-expanded="false"
           style={style}
         >
           <span className="caret" />
-        </a>
+        </button>
       </div>
     ).props.children : (
       <a
