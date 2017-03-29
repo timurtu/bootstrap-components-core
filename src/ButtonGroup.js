@@ -18,7 +18,8 @@ class ButtonGroup extends React.Component {
       title,
       vertical,
       justified,
-      type
+      type,
+      style
     } = this.props
 
     if (toolbar) {
@@ -76,6 +77,7 @@ class ButtonGroup extends React.Component {
           title={title}
           className={className}
           type={type}
+          style={style}
         >
           {children}
         </Dropdown>
@@ -86,6 +88,7 @@ class ButtonGroup extends React.Component {
       <div
         className={className}
         role="group"
+        style={style}
       >
         {buttons}
       </div>

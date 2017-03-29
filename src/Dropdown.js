@@ -15,7 +15,8 @@ class Dropdown extends React.Component {
       right,
       group,
       className,
-      type
+      type,
+      style
     } = this.props
     const items = [].concat(children)
     const dropdownItems = items.map((item, i) => {
@@ -114,7 +115,10 @@ class Dropdown extends React.Component {
     }
 
     return (
-      <div className={dropup ? 'dropup' : 'dropdown'}>
+      <div
+        style={style}
+        className={dropup ? 'dropup' : 'dropdown'}
+      >
         {dropdownLink}
         {dropdownMenu}
       </div>
