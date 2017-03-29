@@ -116,6 +116,7 @@ class Dropdown extends React.Component {
         style={style}
       >
         {title}
+        {' '}
         <span className="caret" />
         <span className="sr-only">Toggle Dropdown</span>
       </a>
@@ -129,10 +130,7 @@ class Dropdown extends React.Component {
 
     if (group) {
       return (
-        <div
-          className={className}
-          role="group"
-        >
+        <div className={className}>
           {dropdownLink}
           {dropdownMenu}
         </div>
