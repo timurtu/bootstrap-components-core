@@ -91,6 +91,7 @@ class Dropdown extends React.Component {
         role="button"
         aria-haspopup="true"
         aria-expanded="false"
+        style={style}
       >
         {title} <span className="caret" />
       </a>
