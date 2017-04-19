@@ -70,12 +70,11 @@ class ButtonGroup extends React.Component {
       return child
     })
 
-    const className = `btn-group${vertical ? '-vertical' : ''}${justified ? ' btn-group-justified' : ''}`
+    const className = `btn-group${vertical ? '-vertical' : ''}${dropup ? ' dropup ' : ''}${justified ? ' btn-group-justified' : ''}`
 
     if (dropdown || dropup) {
       return (
         <Dropdown
-          {...this.props}
           group
           title={title}
           className={className}
