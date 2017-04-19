@@ -80,6 +80,7 @@ class ButtonGroup extends React.Component {
           type={type}
           style={style}
           split={split}
+          size={size}
         >
           {children}
         </Dropdown>
