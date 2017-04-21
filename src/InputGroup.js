@@ -17,14 +17,12 @@ class InputGroup extends React.Component {
         return null
       }
 
-      // const { to, href, disabled } = item.props
-
       switch (item.type) {
         case 'addon':
           return (
             <span
               key={i}
-              className="divider"
+              className="input-group-addon"
             >
               {item.props.children}
             </span>
@@ -34,6 +32,7 @@ class InputGroup extends React.Component {
           return (
             <input
               key={i}
+              className="form-control"
               {...item.props}
             >
               {item.props.children}
