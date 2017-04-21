@@ -40,7 +40,7 @@ class InputGroup extends React.Component {
           )
       }
 
-      return item
+      return item.props.children
     })
 
     return (
