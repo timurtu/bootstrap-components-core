@@ -7,7 +7,7 @@ import React from 'react'
 class InputGroup extends React.Component {
 
   render() {
-    const { children } = this.props
+    const { children, size } = this.props
 
     const items = [].concat(children)
 
@@ -44,10 +44,7 @@ class InputGroup extends React.Component {
     })
 
     return (
-      <div
-        className="input-group"
-        {...this.props}
-      >
+      <div className={`input-group${size ? ' input-group' + size : ''}`}>
         {inputs}
       </div>
     )
