@@ -44,7 +44,10 @@ class InputGroup extends React.Component {
     })
 
     return (
-      <div className="input-group">
+      <div
+        className="input-group"
+        {...this.props}
+      >
         {inputs}
       </div>
     )
