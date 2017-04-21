@@ -44,7 +44,7 @@ class InputGroup extends React.Component {
     })
 
     return (
-      <div className={`input-group${size ? ' input-group' + size : ''}`}>
+      <div className={`input-group${size ? ' input-group-' + size : ''}`}>
         {inputs}
       </div>
     )
