@@ -37,6 +37,7 @@
     "Container.js",
     "Dropdown.js",
     "Grid.js",
-    "Icon.js"
+    "Icon.js",
+    "InputGroup.js"
   ]
 }

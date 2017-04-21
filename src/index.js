@@ -5,6 +5,7 @@ import Container from './Container.js';
 import Dropdown from './Dropdown.js';
 import Grid from './Grid.js';
 import Icon from './Icon.js';
+import InputGroup from './InputGroup.js';
 
 export {
   Alert,
@@ -13,5 +14,6 @@ export {
   Container,
   Dropdown,
   Grid,
-  Icon
+  Icon,
+  InputGroup
 };
