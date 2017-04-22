@@ -43,7 +43,10 @@ class InputGroup extends React.Component {
         case 'button':
           return (
             <span className="input-group-btn">
-              <Button {...item.props}>
+              <Button
+                key={i}
+                {...item.props}
+              >
                 {item.props.children}
               </Button>
             </span>
