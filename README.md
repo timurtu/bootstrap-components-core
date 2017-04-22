@@ -20,7 +20,7 @@ yarn add bootstrap-components
 
 ## Start the Demo Application
 ```
-git clone https://github.com/axiom-team/bootstrap-components
+git clone https://github.com/timurtu/bootstrap-components
 ```
 ```
 cd bootstrap-components
