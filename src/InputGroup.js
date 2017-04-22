@@ -38,6 +38,19 @@ class InputGroup extends React.Component {
               {item.props.children}
             </input>
           )
+
+        case 'button':
+
+          const { type } = item.props
+          const btnClassName = `btn${type ? ' btn-' + type : ''}`
+
+          return (
+            <span className="input-group-btn">
+              <button className={btnClassName}>
+                {item.props.children}
+              </button>
+            </span>
+          )
       }
 
       return item
