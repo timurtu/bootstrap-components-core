@@ -3,6 +3,7 @@
  */
 
 import React from 'react'
+import Button from './Button'
 
 class InputGroup extends React.Component {
 
@@ -40,15 +41,11 @@ class InputGroup extends React.Component {
           )
 
         case 'button':
-
-          const { type } = item.props
-          const btnClassName = `btn${type ? ' btn-' + type : ''}`
-
           return (
             <span className="input-group-btn">
-              <button className={btnClassName}>
+              <Button {...item.props}>
                 {item.props.children}
-              </button>
+              </Button>
             </span>
           )
       }
