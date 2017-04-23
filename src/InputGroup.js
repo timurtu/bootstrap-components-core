@@ -4,6 +4,7 @@
 
 import React from 'react'
 import Button from './Button'
+import ButtonGroup from './ButtonGroup'
 
 class InputGroup extends React.Component {
 
@@ -46,9 +47,15 @@ class InputGroup extends React.Component {
               key={i}
               className="input-group-btn"
             >
-              <Button {...item.props}>
-                {item.props.children}
-              </Button>
+              {item.props.dropdown ? (
+                <ButtonGroup {...item.props}>
+                  {item.props.children}
+                </ButtonGroup>
+              ) : (
+                <Button {...item.props}>
+                  {item.props.children}
+                </Button>
+              )}
             </span>
           )
       }
