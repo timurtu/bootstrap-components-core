@@ -149,8 +149,5 @@ class Dropdown extends React.Component {
     )
   }
 }
-Dropdown.propTypes = {
-  children: React.PropTypes.any.isRequired
-}
 
 export default Dropdown
