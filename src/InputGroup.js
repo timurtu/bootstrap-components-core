@@ -13,6 +13,12 @@ class InputGroup extends React.Component {
 
     const items = [].concat(children)
 
+    if(items.length === 1 && items[0].type === 'input') {
+      return (
+        <input {...item[0].props} className="form-control" />
+      )
+    }
+
     const inputs = items.map((item, i) => {
 
       if (item === undefined) {
