@@ -13,8 +13,5 @@ const Icon = props => (
     aria-hidden="true"
   />
 )
-Icon.propTypes = {
-  children: React.PropTypes.string.isRequired
-}
 
 export default Icon
