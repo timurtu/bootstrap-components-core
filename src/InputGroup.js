@@ -15,7 +15,7 @@ class InputGroup extends React.Component {
 
     if(items.length === 1 && items[0].type === 'input') {
       return (
-        <input {...item[0].props} className="form-control" />
+        <input {...items[0].props} className="form-control" />
       )
     }
 
