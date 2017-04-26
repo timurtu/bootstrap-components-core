@@ -7,7 +7,13 @@ import React from 'react'
 class Nav extends React.Component {
 
   render() {
-    const { children, tabs, pills, stacked } = this.props
+    const {
+      children,
+      tabs,
+      pills,
+      stacked,
+      justified
+    } = this.props
 
     const items = [].concat(children)
 
@@ -34,8 +40,18 @@ class Nav extends React.Component {
       return item
     })
 
+    const className = `nav${
+      tabs ? ' nav-tabs' : ''
+      }${
+      pills ? ' nav-pills' : ''
+      }${
+      stacked ? ' nav-stacked' : ''
+      }${
+      justified ? ' nav-justified' : ''
+      }`
+
     return (
-      <ul className={`nav${tabs ? ' nav-tabs' : ''}${pills ? ' nav-pills' : ''}${stacked ? ' nav-stacked' : ''}`}>
+      <ul className={className}>
         {links}
       </ul>
     )
