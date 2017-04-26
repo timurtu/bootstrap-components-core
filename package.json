@@ -38,6 +38,7 @@
     "Dropdown.js",
     "Grid.js",
     "Icon.js",
-    "InputGroup.js"
+    "InputGroup.js",
+    "Nav.js"
   ]
 }

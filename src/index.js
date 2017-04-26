@@ -6,6 +6,7 @@ import Dropdown from './Dropdown.js';
 import Grid from './Grid.js';
 import Icon from './Icon.js';
 import InputGroup from './InputGroup.js';
+import Nav from './Nav.js';
 
 export {
   Alert,
@@ -15,5 +16,6 @@ export {
   Dropdown,
   Grid,
   Icon,
-  InputGroup
+  InputGroup,
+  Nav
 };
