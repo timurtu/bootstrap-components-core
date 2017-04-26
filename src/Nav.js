@@ -2,10 +2,6 @@
  * Created by timur on 4/25/17.
  */
 
-/**
- * Created by timur on 2/20/17.
- */
-
 import React from 'react'
 
 class Nav extends React.Component {
@@ -35,7 +31,6 @@ class Nav extends React.Component {
             </li>
           )
       }
-
       return item
     })
 
