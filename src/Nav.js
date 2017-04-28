@@ -3,6 +3,7 @@
  */
 
 import React from 'react'
+import Dropdown from './Dropdown'
 
 class Nav extends React.Component {
 
@@ -25,6 +26,12 @@ class Nav extends React.Component {
 
       switch (item.type) {
         case 'div':
+
+          if(item.props.dropdown) {
+            return (
+              <Dropdown {...item.props}/>
+            )
+          }
 
           const className = `${
             item.props.active ? 'active' : ''}${
