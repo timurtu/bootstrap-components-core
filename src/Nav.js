@@ -25,11 +25,17 @@ class Nav extends React.Component {
 
       switch (item.type) {
         case 'div':
+
+          const className = `${
+            item.props.active ? 'active' : ''}${
+            item.props.disabled ? ' disabled' : ''
+            }`
+
           return (
             <li
               key={i}
               role="presentation"
-              className={item.props.active ? 'active' : ''}
+              className={className}
             >
               <a href={item.props.href ? item.props.href : '#'}>
                 {item.props.children}
