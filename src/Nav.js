@@ -28,20 +28,35 @@ class Nav extends React.Component {
 
           if (item.props.dropdown) {
             const dropdownItems = [].concat(item.props.children)
-              .map(dropdownLink => {
+              .map((dropdownLink, j) => {
 
                 switch (dropdownLink.type) {
 
                   case 'hr':
                     return (
-                      <li className="separator" />
+                      <li
+                        key={j}
+                        role="separator"
+                        className="divider"
+                      />
+                    )
+
+                  case 'header':
+                    return (
+                      <li className="dropdown-header">
+                        {dropdownLink.props.children}
+                      </li>
                     )
 
                   default:
                     return (
-                      <li>
+                      <li key={j}>
                         <a
-                          href={dropdownLink.props.href ? dropdownLink.props.href : '#'}
+                          href={
+                            dropdownLink.props.href ?
+                              dropdownLink.props.href :
+                              '#'
+                          }
                         >
                           {dropdownLink.props.children}
                         </a>
