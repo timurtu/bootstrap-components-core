@@ -3,7 +3,6 @@
  */
 
 import React from 'react'
-import Dropdown from './Dropdown'
 
 class Nav extends React.Component {
 
@@ -27,9 +26,51 @@ class Nav extends React.Component {
       switch (item.type) {
         case 'div':
 
-          if(item.props.dropdown) {
+          if (item.props.dropdown) {
+            const dropdownItems = [].concat(item.props.children)
+              .map(dropdownLink => {
+
+                switch (dropdownLink.type) {
+
+                  case 'hr':
+                    return (
+                      <li className="separator" />
+                    )
+
+                  default:
+                    return (
+                      <li>
+                        <a
+                          href={dropdownLink.props.href ? dropdownLink.props.href : '#'}
+                        >
+                          {dropdownLink.props.children}
+                        </a>
+                      </li>
+                    )
+                }
+              })
+
             return (
-              <Dropdown {...item.props}/>
+              <li
+                key={i}
+                role="presentation"
+                className="dropdown"
+              >
+                <a
+                  className="dropdown-toggle"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  {item.props.title} <span className="caret" />
+                </a>
+
+                <ul className="dropdown-menu">
+                  {dropdownItems}
+                </ul>
+              </li>
             )
           }
 
