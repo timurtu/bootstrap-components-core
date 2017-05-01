@@ -39,6 +39,7 @@
     "Grid.js",
     "Icon.js",
     "InputGroup.js",
-    "Nav.js"
+    "Nav.js",
+    "Navbar.js"
   ]
 }

@@ -7,6 +7,7 @@ import Grid from './Grid.js';
 import Icon from './Icon.js';
 import InputGroup from './InputGroup.js';
 import Nav from './Nav.js';
+import Navbar from './Navbar.js';
 
 export {
   Alert,
@@ -17,5 +18,6 @@ export {
   Grid,
   Icon,
   InputGroup,
-  Nav
+  Nav,
+  Navbar
 };
