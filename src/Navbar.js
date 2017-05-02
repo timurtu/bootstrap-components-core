@@ -21,7 +21,10 @@ const Navbar = ({ children }) => {
 
                 case 'brand':
                   return (
-                    <a href={`${itemChild.props.href ? itemChild.props.href : '#'}`}>
+                    <a
+                      key={j}
+                      href={`${itemChild.props.href ? itemChild.props.href : '#'}`}
+                    >
                       {itemChild.props.children}
                     </a>
                   )
@@ -32,7 +35,10 @@ const Navbar = ({ children }) => {
             })
 
           return (
-            <div className="navbar-header">
+            <div
+              key={i}
+              className="navbar-header"
+            >
               <button
                 type="button"
                 className="navbar-toggle collapsed"
