@@ -3,9 +3,12 @@
  */
 
 import React from 'react'
+import cuid from 'cuid'
 import Container from './Container'
 
 const Navbar = ({ children }) => {
+
+  const navID = cuid()
 
   const items = []
     .concat(children)
@@ -45,7 +48,7 @@ const Navbar = ({ children }) => {
                 type="button"
                 className="navbar-toggle collapsed"
                 data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1"
+                data-target={`#${navID}`}
                 aria-expanded="false"
               >
                 <span className="sr-only">Toggle navigation</span>
@@ -64,19 +67,27 @@ const Navbar = ({ children }) => {
     })
 
   const navBody = (
-    <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div
+      className="collapse navbar-collapse"
+      id={navID}
+    >
       <ul className="nav navbar-nav">
-        <li className="active"><a href="#">Link <span className="sr-only">(current)</span></a></li>
+        <li className="active">
+          <a href="#">Link <span className="sr-only">(current)</span></a>
+        </li>
         <li><a href="#">Link</a></li>
         <li className="dropdown">
-          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span className="caret"></span></a>
+          <a
+            href="#"
+            className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+             aria-expanded="false">Dropdown <span className="caret" /></a>
           <ul className="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
-            <li role="separator" className="divider"/>
+            <li role="separator" className="divider" />
             <li><a href="#">Separated link</a></li>
-            <li role="separator" className="divider"/>
+            <li role="separator" className="divider" />
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
@@ -84,7 +95,7 @@ const Navbar = ({ children }) => {
 
       <form className="navbar-form navbar-left">
         <div className="form-group">
-          <input type="text" className="form-control" placeholder="Search"/>
+          <input type="text" className="form-control" placeholder="Search" />
         </div>
         <button type="submit" className="btn btn-default">Submit</button>
       </form>
@@ -92,12 +103,21 @@ const Navbar = ({ children }) => {
       <ul className="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
         <li className="dropdown">
-          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span className="caret"></span></a>
+          <a
+            href="#"
+            className="dropdown-toggle"
+            data-toggle="dropdown"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Dropdown <span className="caret" />
+          </a>
           <ul className="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
-            <li role="separator" className="divider"/>
+            <li role="separator" className="divider" />
             <li><a href="#">Separated link</a></li>
           </ul>
         </li>
