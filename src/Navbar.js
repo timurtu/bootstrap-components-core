@@ -48,10 +48,10 @@ const Navbar = ({ children }) => {
                 data-target="#bs-example-navbar-collapse-1"
                 aria-expanded="false"
               >
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar" />
-                <span class="icon-bar" />
-                <span class="icon-bar" />
+                <span className="sr-only">Toggle navigation</span>
+                <span className="icon-bar" />
+                <span className="icon-bar" />
+                <span className="icon-bar" />
               </button>
               {headerItems}
             </div>
