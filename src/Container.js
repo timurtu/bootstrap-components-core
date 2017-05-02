@@ -4,7 +4,7 @@
 
 import React from 'react'
 
-const Container = props => (
+const Container = ({ fluid, ...props }) => (
   <div
     {...props}
     className={`container${props.fluid ? '-fluid' : ''}`}
