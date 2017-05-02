@@ -3,6 +3,7 @@
  */
 
 import React from 'react'
+import Container from './Container'
 
 const Navbar = ({ children }) => {
 
@@ -47,9 +48,9 @@ const Navbar = ({ children }) => {
                 aria-expanded="false"
               >
                 <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"/>
-                <span class="icon-bar"/>
-                <span class="icon-bar"/>
+                <span class="icon-bar" />
+                <span class="icon-bar" />
+                <span class="icon-bar" />
               </button>
               {headerItems}
             </div>
@@ -63,7 +64,9 @@ const Navbar = ({ children }) => {
 
   return (
     <div className="navbar navbar-default">
-      {items}
+      <Container fluid>
+        {items}
+      </Container>
     </div>
   )
 }
