@@ -25,6 +25,7 @@ const Navbar = ({ children }) => {
                     <a
                       key={j}
                       href={`${itemChild.props.href ? itemChild.props.href : '#'}`}
+                      className="navbar-brand"
                     >
                       {itemChild.props.children}
                     </a>
