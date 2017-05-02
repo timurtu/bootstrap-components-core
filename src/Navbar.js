@@ -57,7 +57,7 @@ const Navbar = ({ children }) => {
 
   return (
     <div className="navbar navbar-default">
-      {children}
+      {items}
     </div>
   )
 }
