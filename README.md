@@ -1,6 +1,6 @@
 # React Bootstrap Components
 
-## [getreactbootstrap.com](https://getreactbootstrap.com/)
+## [Get Started Now](https://bootstrapcomponents.wordpress.com/)
 
 ### [![npm version](https://badge.fury.io/js/bootstrap-components.svg)](https://badge.fury.io/js/bootstrap-components)
 
