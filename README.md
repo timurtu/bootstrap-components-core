@@ -1,10 +1,6 @@
 # React Bootstrap Components
 
-## [Get Started Now](https://bootstrapcomponents.wordpress.com/)
-
 ### [![npm version](https://badge.fury.io/js/bootstrap-components.svg)](https://badge.fury.io/js/bootstrap-components)
-
-#### [Demo Application and Documentation](https://getreactbootstrap.com/)
 
 ## Install
 
